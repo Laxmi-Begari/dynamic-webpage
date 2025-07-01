@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eat Clean - Dynamic Page</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 60px;
+      color: white;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #222;
+      padding: 30px;
+      border-radius: 15px;
+      width: 70%;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.25);
+    }
+    button {
+      background-color: #185a9d;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #tip {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #185a9d;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🥗 Eat Clean and Natural Foods</h1>
+    <p>Click below to get a healthy food tip!</p>
+    <button onclick="showTip()">Get Tip</button>
+    <div id="tip"></div>
+  </div>
+
+  <script>
+    const tips = [
+      "Drink lemon water every morning 🍋",
+      "Add greens to every meal 🥬",
+      "Avoid processed sugar 🚫",
+      "Snack on almonds or walnuts 🥜",
+      "Replace soda with fruit-infused water 🍓💧"
+    ];
+
+    function showTip() {
+      const random = Math.floor(Math.random() * tips.length);
+      document.getElementById("tip").textContent = tips[random];
+    }
+  </script>
+</body>
+</html>
